@@ -1,0 +1,36 @@
+first install freebsd and put the users that should use the su command
+in wheel or else they wont be able to use the su command.
+
+then run freebsd when ur done with the installation of freebsd
+
+then install the drm-kmod
+
+the first thing to do is to find out all the configuration u would need to do for some basic gui. in my case i tried the official handbook and it didnt help.
+then i ran startx and followed the log files it gave me and that was it.
+
+then enable dbus by writing sysrc dbus_enable="YES" in the commandline
+
+then mount procfs by default by in the file: "/etc/fstab" the line below:
+proc         /proc   procfs  rw    0 0  
+
+now in case u wonna use xorg and xfce then install sddm and write:
+sysrc sddm_enable="YES"
+//commands for installing xfce
+in the commandline
+
+
+
+ these are the steps that worked for me and i wrote these notes for my own
+self so if there are any errors then i dont care cuz i am new to freebsd
+and i just didnt wanted to lose the steps that worked for me.
+
+
+
+
+
+
+
+
+also note that the  ufs file system dosent automactically take up snapshots of all ur files.
+
+
